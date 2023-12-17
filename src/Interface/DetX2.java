@@ -149,7 +149,7 @@ public class DetX2 extends javax.swing.JPanel {
         int a22 = Integer.parseInt(A22.getText());
 
         
-        Hasil.setText(String.valueOf((a21*a12)-(a11*a22)));
+        Hasil.setText(String.valueOf((a11*a22)-(a12*a21)));
         
     }//GEN-LAST:event_HitungMouseClicked
 

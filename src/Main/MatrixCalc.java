@@ -27,7 +27,7 @@ public class MatrixCalc extends javax.swing.JFrame {
     public MatrixCalc() {
         setTitle("Matrix Calculator");
         initComponents();
-        
+        //DONEGAYSEEEE
        
     }
     

@@ -29,26 +29,43 @@ public class DetX3 extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         A11 = new javax.swing.JTextField();
+        A12 = new javax.swing.JTextField();
+        A13 = new javax.swing.JTextField();
         A21 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
+        A22 = new javax.swing.JTextField();
+        A23 = new javax.swing.JTextField();
+        A31 = new javax.swing.JTextField();
+        A32 = new javax.swing.JTextField();
+        A33 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        Hasil = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
         setLayout(new java.awt.BorderLayout());
 
         jPanel1.setPreferredSize(new java.awt.Dimension(518, 530));
 
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        A11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                A11MouseClicked(evt);
+            }
+        });
+        A11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                A11ActionPerformed(evt);
+            }
+        });
+
+        A12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                A12ActionPerformed(evt);
+            }
+        });
+
+        A32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                A32ActionPerformed(evt);
             }
         });
 
@@ -59,19 +76,19 @@ public class DetX3 extends javax.swing.JPanel {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
+                    .addComponent(A31, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
                     .addComponent(A21, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(A11, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField7))
+                    .addComponent(A12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
+                    .addComponent(A22, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(A32))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField10))
+                    .addComponent(A23, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
+                    .addComponent(A13, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(A33))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -80,23 +97,23 @@ public class DetX3 extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jTextField8)
+                        .addComponent(A13)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField9)
+                        .addComponent(A23)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField10))
+                        .addComponent(A33))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(A11)
-                            .addComponent(jTextField4))
+                            .addComponent(A12))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(A21)
-                            .addComponent(jTextField3))
+                            .addComponent(A22))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField6)
-                            .addComponent(jTextField7))))
+                            .addComponent(A31)
+                            .addComponent(A32))))
                 .addContainerGap())
         );
 
@@ -104,14 +121,13 @@ public class DetX3 extends javax.swing.JPanel {
 
         jLabel2.setText("Hasil : ");
 
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        Hasil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                HasilActionPerformed(evt);
             }
         });
 
         jButton1.setBackground(new java.awt.Color(0, 153, 102));
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Hitung");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -134,7 +150,7 @@ public class DetX3 extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField5))
+                        .addComponent(Hasil))
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -155,52 +171,70 @@ public class DetX3 extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Hasil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(397, Short.MAX_VALUE))
         );
 
         add(jPanel1, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void HasilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HasilActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_HasilActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-//        // TODO add your handling code here:
-//        int a11 = Integer.parseInt(A11.getText());
-//        int a12 = Integer.parseInt(A12.getText());
-//        int a21 = Integer.parseInt(A21.getText());
-//        int a22 = Integer.parseInt(A22.getText());
+        // TODO add your handling code here:
+        int a11 = Integer.parseInt(A11.getText());
+        int a12 = Integer.parseInt(A12.getText());
+        int a13 = Integer.parseInt(A31.getText());
+        int a21 = Integer.parseInt(A21.getText());
+        int a22 = Integer.parseInt(A22.getText());
+        int a23 = Integer.parseInt(A23.getText());
+        int a31 = Integer.parseInt(A31.getText());
+        int a32 = Integer.parseInt(A32.getText());
+        int a33 = Integer.parseInt(A33.getText());
+        int result =((a11*a22*a23)+(a12*a23*a31)+(a13*a21*a32))-((a13*a22*a31)+(a11*a23*a32)+(a12*a21*a33));
 //
 //        
-//        Hasil.setText(String.valueOf((a21*a12)-(a11*a22)));
+        Hasil.setText(String.valueOf(result));
     }//GEN-LAST:event_jButton1MouseClicked
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void A32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A32ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_A32ActionPerformed
+
+    private void A11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_A11MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_A11MouseClicked
+
+    private void A12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_A12ActionPerformed
+
+    private void A11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_A11ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField A11;
+    private javax.swing.JTextField A12;
+    private javax.swing.JTextField A13;
     private javax.swing.JTextField A21;
+    private javax.swing.JTextField A22;
+    private javax.swing.JTextField A23;
+    private javax.swing.JTextField A31;
+    private javax.swing.JTextField A32;
+    private javax.swing.JTextField A33;
+    private javax.swing.JTextField Hasil;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }

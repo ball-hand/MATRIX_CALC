@@ -56,6 +56,12 @@ public class Transpose extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(518, 530));
         setLayout(new java.awt.BorderLayout());
 
+        A11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                A11ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -90,7 +96,6 @@ public class Transpose extends javax.swing.JPanel {
         jLabel1.setText("Matrix A");
 
         jButton1.setBackground(new java.awt.Color(0, 153, 102));
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Traspose");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -180,12 +185,16 @@ public class Transpose extends javax.swing.JPanel {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
       
-        B11.setText(A21.getText());
-        B12.setText(A11.getText());
-        B21.setText(A22.getText());
-        B22.setText(A12.getText());
+        B11.setText(A11.getText());
+        B21.setText(A12.getText());
+        B12.setText(A21.getText());
+        B22.setText(A22.getText());
         
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void A11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_A11ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
