@@ -6,6 +6,7 @@ package Main;
 
 import Interface.Balikan;
 import Interface.DetX2;
+import Interface.DetX3;
 import Interface.Transpose;
 import Interface.X2;
 import Interface.X3;
@@ -49,10 +50,14 @@ public class MatrixCalc extends javax.swing.JFrame {
         Determinan = new javax.swing.JToggleButton();
         PenjumlahanPengurangan = new javax.swing.JToggleButton();
         SPL = new javax.swing.JToggleButton();
+        SPL1 = new javax.swing.JToggleButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         Pn_Main = new javax.swing.JPanel();
         Pn_utama = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocationByPlatform(true);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
@@ -64,23 +69,38 @@ public class MatrixCalc extends javax.swing.JFrame {
         Pn_Sidebar.setPreferredSize(new java.awt.Dimension(280, 600));
         Pn_Sidebar.setLayout(new javax.swing.BoxLayout(Pn_Sidebar, javax.swing.BoxLayout.LINE_AXIS));
 
-        Lb_Title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Lb_Title.setText("Aljabar Geometri");
+        Pn_menu.setBackground(new java.awt.Color(51, 51, 51));
 
-        Transpose.setText("Transpose");
+        Lb_Title.setFont(new java.awt.Font("Liberation Sans", 1, 20)); // NOI18N
+        Lb_Title.setForeground(new java.awt.Color(0, 153, 102));
+        Lb_Title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Lb_Title.setText("ALJABAR GEOMETRI");
+
+        Transpose.setBackground(new java.awt.Color(0, 153, 102));
+        Transpose.setForeground(new java.awt.Color(0, 0, 0));
+        Transpose.setText("Transpose Matriks");
         Transpose.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 TransposeMouseClicked(evt);
             }
         });
+        Transpose.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TransposeActionPerformed(evt);
+            }
+        });
 
-        balikan.setText("Balikan");
+        balikan.setBackground(new java.awt.Color(0, 153, 102));
+        balikan.setForeground(new java.awt.Color(0, 0, 0));
+        balikan.setText("Balikan Matriks");
         balikan.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 balikanMouseClicked(evt);
             }
         });
 
+        Determinan.setBackground(new java.awt.Color(0, 153, 102));
+        Determinan.setForeground(new java.awt.Color(0, 0, 0));
         Determinan.setText("Determinan");
         Determinan.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -88,19 +108,48 @@ public class MatrixCalc extends javax.swing.JFrame {
             }
         });
 
-        PenjumlahanPengurangan.setText("Penjumlahan & Pengurangan");
+        PenjumlahanPengurangan.setBackground(new java.awt.Color(0, 153, 102));
+        PenjumlahanPengurangan.setForeground(new java.awt.Color(0, 0, 0));
+        PenjumlahanPengurangan.setText("Penjumlahan & Pengurangan Matriks");
         PenjumlahanPengurangan.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 PenjumlahanPenguranganMouseClicked(evt);
             }
         });
+        PenjumlahanPengurangan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PenjumlahanPenguranganActionPerformed(evt);
+            }
+        });
 
+        SPL.setBackground(new java.awt.Color(0, 153, 102));
+        SPL.setForeground(new java.awt.Color(0, 0, 0));
         SPL.setText("Solusi Persamaan Linear");
         SPL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SPLActionPerformed(evt);
             }
         });
+
+        SPL1.setBackground(new java.awt.Color(0, 153, 102));
+        SPL1.setForeground(new java.awt.Color(0, 0, 0));
+        SPL1.setText("Keluar");
+        SPL1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SPL1MouseClicked(evt);
+            }
+        });
+        SPL1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SPL1ActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Mask group 1 (1).png"))); // NOI18N
+
+        jLabel2.setFont(new java.awt.Font("Liberation Sans", 2, 10)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("@STT_Cipasung_2023");
 
         javax.swing.GroupLayout Pn_menuLayout = new javax.swing.GroupLayout(Pn_menu);
         Pn_menu.setLayout(Pn_menuLayout);
@@ -111,23 +160,35 @@ public class MatrixCalc extends javax.swing.JFrame {
                     .addGroup(Pn_menuLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(Lb_Title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Pn_menuLayout.createSequentialGroup()
-                        .addContainerGap(22, Short.MAX_VALUE)
-                        .addGroup(Pn_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Transpose, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
-                            .addComponent(balikan, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
-                            .addComponent(Determinan, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
-                            .addComponent(PenjumlahanPengurangan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(SPL, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)))
+                    .addGroup(Pn_menuLayout.createSequentialGroup()
+                        .addGroup(Pn_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(Pn_menuLayout.createSequentialGroup()
+                                .addGap(49, 49, 49)
+                                .addComponent(jLabel1))
+                            .addGroup(Pn_menuLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(Pn_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(Transpose, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(balikan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(Determinan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(PenjumlahanPengurangan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(SPL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(SPL1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Pn_menuLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(84, 84, 84))
         );
         Pn_menuLayout.setVerticalGroup(
             Pn_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Pn_menuLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Lb_Title, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Lb_Title, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PenjumlahanPengurangan)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Transpose)
@@ -137,7 +198,11 @@ public class MatrixCalc extends javax.swing.JFrame {
                 .addComponent(Determinan)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(SPL)
-                .addContainerGap(305, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(SPL1)
+                .addGap(88, 88, 88)
+                .addComponent(jLabel2)
+                .addGap(79, 79, 79))
         );
 
         Pn_Sidebar.add(Pn_menu);
@@ -175,9 +240,7 @@ public class MatrixCalc extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 530, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 530, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -199,10 +262,19 @@ public class MatrixCalc extends javax.swing.JFrame {
         
         switch (chose) {
             case 1:
+                var x2= new Interface.X2();
+                
                 Pn_utama.removeAll();
                 Pn_utama.add(new X2());
                 Pn_utama.repaint();
                 Pn_utama.revalidate();
+                
+//                int a11=Integer.parseInt(x2.A11.getToolTipText());
+//                int a12=Integer.parseInt(x2.getToolTipText());
+//                int a21=Integer.parseInt(x2.getToolTipText());
+//                int a22=Integer.parseInt(x2.getToolTipText());
+//                
+                
                 break;
             case 2 : 
                 Pn_utama.removeAll();
@@ -211,7 +283,7 @@ public class MatrixCalc extends javax.swing.JFrame {
                 Pn_utama.revalidate();
                 break;
             default:
-                throw new AssertionError();
+                JOptionPane.showMessageDialog(null, "Menu yang anda Pilih tidak tersedia");
         }
     }//GEN-LAST:event_PenjumlahanPenguranganMouseClicked
 
@@ -239,7 +311,6 @@ public class MatrixCalc extends javax.swing.JFrame {
         // TODO add your handling code here:
         String menu= JOptionPane.showInputDialog("Pilih Ordo \n1- 2 X 2 \n2- 3 X 3");
         int chose=Integer.parseInt(menu);
-        
         switch (chose) {
             case 1:
                 Pn_utama.removeAll();
@@ -247,11 +318,37 @@ public class MatrixCalc extends javax.swing.JFrame {
                 Pn_utama.repaint();
                 Pn_utama.revalidate();
                 break;
+            case 2 : 
+                Pn_utama.removeAll();
+                Pn_utama.add(new DetX3());
+                Pn_utama.repaint();
+                Pn_utama.revalidate();
+                break;
             default:
-                throw new AssertionError();
+                JOptionPane.showMessageDialog(null, "Masukan Nda Tidak Valid");
         }
         
     }//GEN-LAST:event_DeterminanMouseClicked
+
+    private void SPL1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SPL1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SPL1ActionPerformed
+
+    private void SPL1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SPL1MouseClicked
+        // TODO add your handling code here:
+       int confirm= JOptionPane.showConfirmDialog(null, "Yakin ingin keluar ?");
+       if( confirm == JOptionPane.YES_OPTION){
+           dispose();
+       }
+    }//GEN-LAST:event_SPL1MouseClicked
+
+    private void TransposeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TransposeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TransposeActionPerformed
+
+    private void PenjumlahanPenguranganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PenjumlahanPenguranganActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PenjumlahanPenguranganActionPerformed
 
     /**
      * @param args the command line arguments
@@ -297,8 +394,11 @@ public class MatrixCalc extends javax.swing.JFrame {
     private javax.swing.JPanel Pn_menu;
     private javax.swing.JPanel Pn_utama;
     private javax.swing.JToggleButton SPL;
+    private javax.swing.JToggleButton SPL1;
     private javax.swing.JToggleButton Transpose;
     private javax.swing.JToggleButton balikan;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 

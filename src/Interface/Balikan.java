@@ -53,6 +53,7 @@ public class Balikan extends javax.swing.JPanel {
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
+        setPreferredSize(new java.awt.Dimension(518, 530));
         setLayout(new java.awt.BorderLayout());
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -88,6 +89,8 @@ public class Balikan extends javax.swing.JPanel {
 
         jLabel1.setText("Matrix A");
 
+        jButton1.setBackground(new java.awt.Color(0, 153, 102));
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Balikan");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

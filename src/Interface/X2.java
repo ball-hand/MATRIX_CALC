@@ -34,10 +34,10 @@ public class X2 extends javax.swing.JPanel {
         A12 = new javax.swing.JTextField();
         LB_MatriksA = new javax.swing.JLabel();
         MatriksB = new javax.swing.JPanel();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
+        B11 = new javax.swing.JTextField();
+        B21 = new javax.swing.JTextField();
+        B22 = new javax.swing.JTextField();
+        B12 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         OP_penjumlahan = new javax.swing.JRadioButton();
@@ -50,7 +50,14 @@ public class X2 extends javax.swing.JPanel {
         C12 = new javax.swing.JTextField();
         Hitung = new javax.swing.JToggleButton();
 
+        setPreferredSize(new java.awt.Dimension(518, 530));
         setLayout(new javax.swing.BoxLayout(this, javax.swing.BoxLayout.LINE_AXIS));
+
+        A21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                A21ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout MatriksALayout = new javax.swing.GroupLayout(MatriksA);
         MatriksA.setLayout(MatriksALayout);
@@ -85,9 +92,9 @@ public class X2 extends javax.swing.JPanel {
 
         LB_MatriksA.setText("Matrix A");
 
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        B11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                B11ActionPerformed(evt);
             }
         });
 
@@ -99,13 +106,13 @@ public class X2 extends javax.swing.JPanel {
                 .addGap(14, 14, 14)
                 .addGroup(MatriksBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(MatriksBLayout.createSequentialGroup()
-                        .addComponent(jTextField5)
+                        .addComponent(B11)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField8))
+                        .addComponent(B12))
                     .addGroup(MatriksBLayout.createSequentialGroup()
-                        .addComponent(jTextField6)
+                        .addComponent(B21)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField7)))
+                        .addComponent(B22)))
                 .addGap(16, 16, 16))
         );
         MatriksBLayout.setVerticalGroup(
@@ -113,12 +120,12 @@ public class X2 extends javax.swing.JPanel {
             .addGroup(MatriksBLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(MatriksBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField5)
-                    .addComponent(jTextField8))
+                    .addComponent(B11)
+                    .addComponent(B12))
                 .addGap(14, 14, 14)
                 .addGroup(MatriksBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField6)
-                    .addComponent(jTextField7))
+                    .addComponent(B21)
+                    .addComponent(B22))
                 .addGap(16, 16, 16))
         );
 
@@ -175,7 +182,14 @@ public class X2 extends javax.swing.JPanel {
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
+        Hitung.setBackground(new java.awt.Color(0, 153, 102));
+        Hitung.setForeground(new java.awt.Color(0, 0, 0));
         Hitung.setText("Hitung");
+        Hitung.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                HitungMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -191,28 +205,27 @@ public class X2 extends javax.swing.JPanel {
                         .addComponent(OP_penjumlahan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
                         .addComponent(OP_pengurangan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(206, 206, 206))
+                        .addGap(37, 37, 37)
+                        .addComponent(Hitung, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(42, 42, 42))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(MatriksA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(14, 14, 14)
-                                .addComponent(Hitung, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(36, 36, 36)
-                                .addComponent(Hasil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(LB_MatriksA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(119, 119, 119)))
+                        .addGap(74, 74, 74)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(MatriksB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(MatriksA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(LB_MatriksA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGap(119, 119, 119)))
-                                .addGap(74, 74, 74)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(MatriksB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGap(118, 118, 118)))))
+                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(118, 118, 118)))
                         .addGap(28, 28, 28))
-                    .addComponent(LB_Hasil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(LB_Hasil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(Hasil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(84, 84, 84))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -232,25 +245,21 @@ public class X2 extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(OP_penjumlahan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(OP_pengurangan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(64, 64, 64)
-                        .addComponent(LB_Hasil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Hasil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(99, 99, 99)
-                        .addComponent(Hitung, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(22, Short.MAX_VALUE))
+                    .addComponent(OP_pengurangan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Hitung))
+                .addGap(63, 63, 63)
+                .addComponent(LB_Hasil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Hasil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(92, Short.MAX_VALUE))
         );
 
         add(jPanel1);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void B11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B11ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_B11ActionPerformed
 
     private void OP_penjumlahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OP_penjumlahanActionPerformed
         // TODO add your handling code here:
@@ -260,12 +269,47 @@ public class X2 extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_OP_penguranganActionPerformed
 
+    private void HitungMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HitungMouseClicked
+        // TODO add your handling code here:
+        int a[][]= new int[2][2];
+        
+        int a11 = Integer.parseInt(A11.getText());
+        int a12 = Integer.parseInt(A12.getText());
+        int a21 = Integer.parseInt(A21.getText());
+        int a22= Integer.parseInt(A22.getText());
+
+        int b11 = Integer.parseInt(B11.getText());
+        int b12 = Integer.parseInt(B12.getText());
+        int b21 = Integer.parseInt(B21.getText());
+        int b22= Integer.parseInt(B22.getText());
+        
+        
+        
+        
+        
+        C11.setText(String.valueOf(b11+a11));
+        C12.setText(String.valueOf(b12+a12));
+        C21.setText(String.valueOf(b21+a21));
+        C22.setText(String.valueOf(b22+a22));
+        
+        
+        
+    }//GEN-LAST:event_HitungMouseClicked
+
+    private void A21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A21ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_A21ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField A11;
     private javax.swing.JTextField A12;
     private javax.swing.JTextField A21;
     private javax.swing.JTextField A22;
+    private javax.swing.JTextField B11;
+    private javax.swing.JTextField B12;
+    private javax.swing.JTextField B21;
+    private javax.swing.JTextField B22;
     private javax.swing.JTextField C11;
     private javax.swing.JTextField C12;
     private javax.swing.JTextField C21;
@@ -281,9 +325,5 @@ public class X2 extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
     // End of variables declaration//GEN-END:variables
 }
