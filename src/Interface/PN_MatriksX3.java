@@ -30,8 +30,8 @@ public class PN_MatriksX3 extends javax.swing.JPanel {
    A22.setForeground(white);
    A23.setForeground(white);
    A31.setForeground(white);
-   A32.setForeground(white);
    A33.setForeground(white);
+   A32.setForeground(white);
    B11.setForeground(white);
    B12.setForeground(white);
    B13.setForeground(white);
@@ -79,13 +79,13 @@ public class PN_MatriksX3 extends javax.swing.JPanel {
         MatrixA = new javax.swing.JPanel();
         A11 = new javax.swing.JTextField();
         A31 = new javax.swing.JTextField();
-        A33 = new javax.swing.JTextField();
+        A32 = new javax.swing.JTextField();
         A12 = new javax.swing.JTextField();
         A21 = new javax.swing.JTextField();
         A22 = new javax.swing.JTextField();
         A13 = new javax.swing.JTextField();
         A23 = new javax.swing.JTextField();
-        A32 = new javax.swing.JTextField();
+        A33 = new javax.swing.JTextField();
         LB_matrixA = new javax.swing.JLabel();
         LB_matrixB = new javax.swing.JLabel();
         OP_choese = new javax.swing.JLabel();
@@ -127,7 +127,12 @@ public class PN_MatriksX3 extends javax.swing.JPanel {
 
         A31.setBackground(new java.awt.Color(51, 51, 51));
 
-        A33.setBackground(new java.awt.Color(51, 51, 51));
+        A32.setBackground(new java.awt.Color(51, 51, 51));
+        A32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                A32ActionPerformed(evt);
+            }
+        });
 
         A12.setBackground(new java.awt.Color(51, 51, 51));
 
@@ -139,7 +144,7 @@ public class PN_MatriksX3 extends javax.swing.JPanel {
 
         A23.setBackground(new java.awt.Color(51, 51, 51));
 
-        A32.setBackground(new java.awt.Color(51, 51, 51));
+        A33.setBackground(new java.awt.Color(51, 51, 51));
 
         javax.swing.GroupLayout MatrixALayout = new javax.swing.GroupLayout(MatrixA);
         MatrixA.setLayout(MatrixALayout);
@@ -155,12 +160,12 @@ public class PN_MatriksX3 extends javax.swing.JPanel {
                 .addGroup(MatrixALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(A22, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(A12, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(A33))
+                    .addComponent(A32))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(MatrixALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(A13)
                     .addComponent(A23, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(A32, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(A33, javax.swing.GroupLayout.Alignment.LEADING))
                 .addGap(16, 16, 16))
         );
         MatrixALayout.setVerticalGroup(
@@ -180,8 +185,8 @@ public class PN_MatriksX3 extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(MatrixALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(A31)
-                    .addComponent(A33)
-                    .addComponent(A32))
+                    .addComponent(A32)
+                    .addComponent(A33))
                 .addGap(13, 13, 13))
         );
 
@@ -431,11 +436,11 @@ public class PN_MatriksX3 extends javax.swing.JPanel {
         double a12 = Integer.parseInt(A12.getText());
         double a21 = Integer.parseInt(A21.getText());
         double a22= Integer.parseInt(A22.getText());
-        double a13= Integer.parseInt(A22.getText());
-        double a23= Integer.parseInt(A22.getText());
-        double a31= Integer.parseInt(A22.getText());
-        double a32= Integer.parseInt(A22.getText());
-        double a33= Integer.parseInt(A22.getText());
+        double a13= Integer.parseInt(A13.getText());
+        double a23= Integer.parseInt(A23.getText());
+        double a31= Integer.parseInt(A31.getText());
+        double a32= Integer.parseInt(A32.getText());
+        double a33= Integer.parseInt(A33.getText());
 
         double b11 = Integer.parseInt(B11.getText());
         double b12 = Integer.parseInt(B12.getText());
@@ -476,6 +481,10 @@ public class PN_MatriksX3 extends javax.swing.JPanel {
         
         
     }//GEN-LAST:event_HitungMouseClicked
+
+    private void A32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A32ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_A32ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

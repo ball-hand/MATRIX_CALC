@@ -141,13 +141,13 @@
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="A22" alignment="0" max="32767" attributes="0"/>
                           <Component id="A12" alignment="0" max="32767" attributes="0"/>
-                          <Component id="A33" max="32767" attributes="0"/>
+                          <Component id="A32" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="A13" max="32767" attributes="0"/>
                           <Component id="A23" alignment="0" max="32767" attributes="0"/>
-                          <Component id="A32" alignment="0" max="32767" attributes="0"/>
+                          <Component id="A33" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                   </Group>
@@ -173,8 +173,8 @@
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="A31" alignment="3" max="32767" attributes="0"/>
-                          <Component id="A33" alignment="3" max="32767" attributes="0"/>
                           <Component id="A32" alignment="3" max="32767" attributes="0"/>
+                          <Component id="A33" alignment="3" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                   </Group>
@@ -196,12 +196,15 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="A33">
+            <Component class="javax.swing.JTextField" name="A32">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="33" green="33" red="33" type="rgb"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="A32ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="A12">
               <Properties>
@@ -238,7 +241,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="A32">
+            <Component class="javax.swing.JTextField" name="A33">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="33" green="33" red="33" type="rgb"/>
