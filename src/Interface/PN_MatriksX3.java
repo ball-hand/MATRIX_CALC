@@ -4,6 +4,8 @@
  */
 package Interface;
 
+import static java.awt.Color.black;
+import static java.awt.Color.white;
 import javax.swing.ButtonGroup;
 
 /**
@@ -21,6 +23,47 @@ public class PN_MatriksX3 extends javax.swing.JPanel {
         ButtonGroup bG = new ButtonGroup();
         bG.add(OP_penjumahan);
         bG.add(OP_pengurangan);
+   A11.setForeground(white);
+   A12.setForeground(white);
+   A13.setForeground(white);
+   A21.setForeground(white);
+   A22.setForeground(white);
+   A23.setForeground(white);
+   A31.setForeground(white);
+   A32.setForeground(white);
+   A33.setForeground(white);
+   B11.setForeground(white);
+   B12.setForeground(white);
+   B13.setForeground(white);
+   B21.setForeground(white);
+   B22.setForeground(white);
+   B23.setForeground(white);
+   B31.setForeground(white);
+   B32.setForeground(white);
+   B33.setForeground(white);
+   C11.setForeground(white);
+   C12.setForeground(white);
+   C13.setForeground(white);
+   C21.setForeground(white);
+   C22.setForeground(white);
+   C23.setForeground(white);
+    C31.setForeground(white);
+    C32.setForeground(white);
+    C33.setForeground(white);
+    LB_hasil.setForeground(white);
+    LB_matrixA.setForeground(white);
+    LB_matrixB.setForeground(white);
+    MatrixA.setForeground(white);
+    MatrixA1.setForeground(white);
+    MatrixA2.setForeground(white);
+    OP_choese.setForeground(white);
+    OP_pengurangan.setForeground(white);
+    OP_penjumahan.setForeground(white);
+    jPanel1.setForeground(white);
+    Hitung.setForeground(black);
+        LB_hasil.setForeground(white);
+        LB_hasil.setForeground(white);
+        LB_hasil.setForeground(white);
     }
 
     /**
@@ -49,7 +92,7 @@ public class PN_MatriksX3 extends javax.swing.JPanel {
         OP_penjumahan = new javax.swing.JRadioButton();
         OP_pengurangan = new javax.swing.JRadioButton();
         LB_hasil = new javax.swing.JLabel();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        Hitung = new javax.swing.JToggleButton();
         MatrixA1 = new javax.swing.JPanel();
         B11 = new javax.swing.JTextField();
         B31 = new javax.swing.JTextField();
@@ -71,41 +114,32 @@ public class PN_MatriksX3 extends javax.swing.JPanel {
         C23 = new javax.swing.JTextField();
         C33 = new javax.swing.JTextField();
 
+        setForeground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(518, 530));
         setLayout(new java.awt.BorderLayout());
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel1.setForeground(null);
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
         MatrixA.setBackground(new java.awt.Color(51, 51, 51));
-        MatrixA.setForeground(null);
 
         A11.setBackground(new java.awt.Color(51, 51, 51));
-        A11.setForeground(null);
 
         A31.setBackground(new java.awt.Color(51, 51, 51));
-        A31.setForeground(null);
 
         A33.setBackground(new java.awt.Color(51, 51, 51));
-        A33.setForeground(null);
 
         A12.setBackground(new java.awt.Color(51, 51, 51));
-        A12.setForeground(null);
 
         A21.setBackground(new java.awt.Color(51, 51, 51));
-        A21.setForeground(null);
 
         A22.setBackground(new java.awt.Color(51, 51, 51));
-        A22.setForeground(null);
 
         A13.setBackground(new java.awt.Color(51, 51, 51));
-        A13.setForeground(null);
 
         A23.setBackground(new java.awt.Color(51, 51, 51));
-        A23.setForeground(null);
 
         A32.setBackground(new java.awt.Color(51, 51, 51));
-        A32.setForeground(null);
 
         javax.swing.GroupLayout MatrixALayout = new javax.swing.GroupLayout(MatrixA);
         MatrixA.setLayout(MatrixALayout);
@@ -152,19 +186,15 @@ public class PN_MatriksX3 extends javax.swing.JPanel {
         );
 
         LB_matrixA.setBackground(new java.awt.Color(51, 51, 51));
-        LB_matrixA.setForeground(null);
         LB_matrixA.setText("Matrix A");
 
         LB_matrixB.setBackground(new java.awt.Color(51, 51, 51));
-        LB_matrixB.setForeground(null);
         LB_matrixB.setText("Matrix B");
 
         OP_choese.setBackground(new java.awt.Color(51, 51, 51));
-        OP_choese.setForeground(null);
         OP_choese.setText("Pilih Operasi yang akan di lakukan");
 
         OP_penjumahan.setBackground(new java.awt.Color(51, 51, 51));
-        OP_penjumahan.setForeground(null);
         OP_penjumahan.setText("Penjumlahan");
         OP_penjumahan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,7 +203,6 @@ public class PN_MatriksX3 extends javax.swing.JPanel {
         });
 
         OP_pengurangan.setBackground(new java.awt.Color(51, 51, 51));
-        OP_pengurangan.setForeground(null);
         OP_pengurangan.setText("Pengurangan");
         OP_pengurangan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -182,48 +211,37 @@ public class PN_MatriksX3 extends javax.swing.JPanel {
         });
 
         LB_hasil.setBackground(new java.awt.Color(51, 51, 51));
-        LB_hasil.setForeground(null);
         LB_hasil.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LB_hasil.setText("Hasil");
 
-        jToggleButton1.setBackground(new java.awt.Color(0, 153, 102));
-        jToggleButton1.setForeground(null);
-        jToggleButton1.setText("Hitung");
-        jToggleButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        Hitung.setBackground(new java.awt.Color(0, 153, 102));
+        Hitung.setForeground(new java.awt.Color(0, 0, 0));
+        Hitung.setText("Hitung");
+        Hitung.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jToggleButton1MouseClicked(evt);
+                HitungMouseClicked(evt);
             }
         });
 
         MatrixA1.setBackground(new java.awt.Color(51, 51, 51));
-        MatrixA1.setForeground(null);
 
         B11.setBackground(new java.awt.Color(51, 51, 51));
-        B11.setForeground(null);
 
         B31.setBackground(new java.awt.Color(51, 51, 51));
-        B31.setForeground(null);
 
         B32.setBackground(new java.awt.Color(51, 51, 51));
-        B32.setForeground(null);
 
         B12.setBackground(new java.awt.Color(51, 51, 51));
-        B12.setForeground(null);
 
         B21.setBackground(new java.awt.Color(51, 51, 51));
-        B21.setForeground(null);
 
         B22.setBackground(new java.awt.Color(51, 51, 51));
-        B22.setForeground(null);
 
         B13.setBackground(new java.awt.Color(51, 51, 51));
-        B13.setForeground(null);
 
         B23.setBackground(new java.awt.Color(51, 51, 51));
-        B23.setForeground(null);
 
         B33.setBackground(new java.awt.Color(51, 51, 51));
-        B33.setForeground(null);
 
         javax.swing.GroupLayout MatrixA1Layout = new javax.swing.GroupLayout(MatrixA1);
         MatrixA1.setLayout(MatrixA1Layout);
@@ -270,34 +288,24 @@ public class PN_MatriksX3 extends javax.swing.JPanel {
         );
 
         MatrixA2.setBackground(new java.awt.Color(51, 51, 51));
-        MatrixA2.setForeground(null);
 
         C11.setBackground(new java.awt.Color(51, 51, 51));
-        C11.setForeground(null);
 
         C31.setBackground(new java.awt.Color(51, 51, 51));
-        C31.setForeground(null);
 
         C32.setBackground(new java.awt.Color(51, 51, 51));
-        C32.setForeground(null);
 
         C12.setBackground(new java.awt.Color(51, 51, 51));
-        C12.setForeground(null);
 
         C21.setBackground(new java.awt.Color(51, 51, 51));
-        C21.setForeground(null);
 
         C22.setBackground(new java.awt.Color(51, 51, 51));
-        C22.setForeground(null);
 
         C13.setBackground(new java.awt.Color(51, 51, 51));
-        C13.setForeground(null);
 
         C23.setBackground(new java.awt.Color(51, 51, 51));
-        C23.setForeground(null);
 
         C33.setBackground(new java.awt.Color(51, 51, 51));
-        C33.setForeground(null);
 
         javax.swing.GroupLayout MatrixA2Layout = new javax.swing.GroupLayout(MatrixA2);
         MatrixA2.setLayout(MatrixA2Layout);
@@ -371,7 +379,7 @@ public class PN_MatriksX3 extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(OP_pengurangan)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Hitung, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(OP_choese, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -398,7 +406,7 @@ public class PN_MatriksX3 extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(OP_penjumahan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(OP_pengurangan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Hitung, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(LB_hasil, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -417,27 +425,27 @@ public class PN_MatriksX3 extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_OP_penguranganActionPerformed
 
-    private void jToggleButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jToggleButton1MouseClicked
+    private void HitungMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HitungMouseClicked
         // TODO add your handling code here:
-        int a11 = Integer.parseInt(A11.getText());
-        int a12 = Integer.parseInt(A12.getText());
-        int a21 = Integer.parseInt(A21.getText());
-        int a22= Integer.parseInt(A22.getText());
-        int a13= Integer.parseInt(A22.getText());
-        int a23= Integer.parseInt(A22.getText());
-        int a31= Integer.parseInt(A22.getText());
-        int a32= Integer.parseInt(A22.getText());
-        int a33= Integer.parseInt(A22.getText());
+        double a11 = Integer.parseInt(A11.getText());
+        double a12 = Integer.parseInt(A12.getText());
+        double a21 = Integer.parseInt(A21.getText());
+        double a22= Integer.parseInt(A22.getText());
+        double a13= Integer.parseInt(A22.getText());
+        double a23= Integer.parseInt(A22.getText());
+        double a31= Integer.parseInt(A22.getText());
+        double a32= Integer.parseInt(A22.getText());
+        double a33= Integer.parseInt(A22.getText());
 
-        int b11 = Integer.parseInt(B11.getText());
-        int b12 = Integer.parseInt(B12.getText());
-        int b21 = Integer.parseInt(B21.getText());
-        int b22= Integer.parseInt(B22.getText());
-        int b13= Integer.parseInt(B13.getText());
-        int b23= Integer.parseInt(B23.getText());
-        int b31= Integer.parseInt(B31.getText());
-        int b32= Integer.parseInt(B32.getText());
-        int b33= Integer.parseInt(B33.getText());
+        double b11 = Integer.parseInt(B11.getText());
+        double b12 = Integer.parseInt(B12.getText());
+        double b21 = Integer.parseInt(B21.getText());
+        double b22= Integer.parseInt(B22.getText());
+        double b13= Integer.parseInt(B13.getText());
+        double b23= Integer.parseInt(B23.getText());
+        double b31= Integer.parseInt(B31.getText());
+        double b32= Integer.parseInt(B32.getText());
+        double b33= Integer.parseInt(B33.getText());
         
         
         
@@ -462,12 +470,12 @@ public class PN_MatriksX3 extends javax.swing.JPanel {
             C31.setText(String.valueOf(a31-b31));
             C32.setText(String.valueOf(a32-b32));
             C33.setText(String.valueOf(a33-b33));
-            System.out.println(String.valueOf(b11-a11));
+            
         }
 
         
         
-    }//GEN-LAST:event_jToggleButton1MouseClicked
+    }//GEN-LAST:event_HitungMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -498,6 +506,7 @@ public class PN_MatriksX3 extends javax.swing.JPanel {
     private javax.swing.JTextField C31;
     private javax.swing.JTextField C32;
     private javax.swing.JTextField C33;
+    private javax.swing.JToggleButton Hitung;
     private javax.swing.JLabel LB_hasil;
     private javax.swing.JLabel LB_matrixA;
     private javax.swing.JLabel LB_matrixB;
@@ -508,6 +517,5 @@ public class PN_MatriksX3 extends javax.swing.JPanel {
     private javax.swing.JRadioButton OP_pengurangan;
     private javax.swing.JRadioButton OP_penjumahan;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
 }

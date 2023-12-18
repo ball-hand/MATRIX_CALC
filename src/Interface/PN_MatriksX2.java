@@ -335,15 +335,15 @@ public class PN_MatriksX2 extends javax.swing.JPanel {
     private void HitungMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HitungMouseClicked
         // TODO add your handling code here:
         
-        float a11 = Integer.parseInt(A11.getText());
-        float a12 = Integer.parseInt(A12.getText());
-        float a21 = Integer.parseInt(A21.getText());
-        float a22= Integer.parseInt(A22.getText());
+        double a11 = Integer.parseInt(A11.getText());
+        double a12 = Integer.parseInt(A12.getText());
+        double a21 = Integer.parseInt(A21.getText());
+        double a22= Integer.parseInt(A22.getText());
 
-        float b11 = Integer.parseInt(B11.getText());
-        float b12 = Integer.parseInt(B12.getText());
-        float b21 = Integer.parseInt(B21.getText());
-        float b22= Integer.parseInt(B22.getText());
+        double b11 = Integer.parseInt(B11.getText());
+        double b12 = Integer.parseInt(B12.getText());
+        double b21 = Integer.parseInt(B21.getText());
+        double b22= Integer.parseInt(B22.getText());
         
         
         

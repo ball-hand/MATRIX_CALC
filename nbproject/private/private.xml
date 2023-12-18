@@ -3,12 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/mhiza/Documents/NetBeansProjects/Aljabar_Geometri/src/Main/Home.java</file>
-            <file>file:/C:/Users/mhiza/Documents/NetBeansProjects/Aljabar_Geometri/src/Interface/DetX2.java</file>
-            <file>file:/C:/Users/mhiza/Documents/NetBeansProjects/Aljabar_Geometri/src/Main/MatrixCalc.java</file>
-            <file>file:/C:/Users/mhiza/Documents/NetBeansProjects/Aljabar_Geometri/src/Interface/Transpose.java</file>
-            <file>file:/C:/Users/mhiza/Documents/NetBeansProjects/Aljabar_Geometri/src/Interface/DetX3.java</file>
-            <file>file:/C:/Users/mhiza/Documents/NetBeansProjects/Aljabar_Geometri/src/Interface/Balikan.java</file>
+            <file>file:/home/zero/NetBeansProjects/aljabarGeometri/src/Interface/PN_MatriksX3.java</file>
+            <file>file:/home/zero/NetBeansProjects/aljabarGeometri/src/Main/Style.java</file>
+            <file>file:/home/zero/NetBeansProjects/aljabarGeometri/src/Interface/PN_Balikan.java</file>
+            <file>file:/home/zero/NetBeansProjects/aljabarGeometri/src/Main/Main.java</file>
+            <file>file:/home/zero/NetBeansProjects/aljabarGeometri/src/Interface/PN_MatriksX2.java</file>
+            <file>file:/home/zero/NetBeansProjects/aljabarGeometri/src/Interface/PN_Transpose.java</file>
+            <file>file:/home/zero/NetBeansProjects/aljabarGeometri/src/Main/PN_About.java</file>
+            <file>file:/home/zero/NetBeansProjects/aljabarGeometri/src/Interface/PN_DetX3.java</file>
+            <file>file:/home/zero/NetBeansProjects/aljabarGeometri/src/Interface/PN_SPL.java</file>
+            <file>file:/home/zero/NetBeansProjects/aljabarGeometri/src/Interface/PN_DetX2.java</file>
         </group>
     </open-files>
 </project-private>

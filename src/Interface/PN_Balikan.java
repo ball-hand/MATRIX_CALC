@@ -219,12 +219,12 @@ public class PN_Balikan extends javax.swing.JPanel {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-        float a11 = Integer.parseInt(A11.getText());
-        float a12 = Integer.parseInt(A12.getText());
-        float a21 = Integer.parseInt(A21.getText());
-        float a22= Integer.parseInt(A22.getText());
+        double a11 = Integer.parseInt(A11.getText());
+        double a12 = Integer.parseInt(A12.getText());
+        double a21 = Integer.parseInt(A21.getText());
+        double a22= Integer.parseInt(A22.getText());
         
-        float Adjoin[][]={
+        double Adjoin[][]={
             {a22,(a12-2*a12)},
             {(a21-2*a21),a11}
         };

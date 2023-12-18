@@ -166,10 +166,10 @@ public class PN_DetX2 extends javax.swing.JPanel {
 
     private void HitungMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HitungMouseClicked
         // TODO add your handling code here:
-        float a11 = Integer.parseInt(A11.getText());
-        float a12 = Integer.parseInt(A12.getText());
-        float a21 = Integer.parseInt(A21.getText());
-        float a22 = Integer.parseInt(A22.getText());
+        double a11 = Integer.parseInt(A11.getText());
+        double a12 = Integer.parseInt(A12.getText());
+        double a21 = Integer.parseInt(A21.getText());
+        double a22 = Integer.parseInt(A22.getText());
 
         
         Hasil.setText(String.valueOf((a11*a22)-(a12*a21)));

@@ -228,16 +228,16 @@ public class PN_DetX3 extends javax.swing.JPanel {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-        float a11 = Integer.parseInt(A11.getText());
-        float a12 = Integer.parseInt(A12.getText());
-        float a13 = Integer.parseInt(A13.getText());
-        float a21 = Integer.parseInt(A21.getText());
-        float a22 = Integer.parseInt(A22.getText());
-        float a23 = Integer.parseInt(A23.getText());
-        float a31 = Integer.parseInt(A31.getText());
-        float a32 = Integer.parseInt(A32.getText());
-        float a33 = Integer.parseInt(A33.getText());
-        float result =((a11*a22*a33)+(a12*a23*a31)+(a13*a21*a32))-((a13*a22*a31)+(a11*a23*a32)+(a12*a21*a33));
+        double a11 = Integer.parseInt(A11.getText());
+        double a12 = Integer.parseInt(A12.getText());
+        double a13 = Integer.parseInt(A13.getText());
+        double a21 = Integer.parseInt(A21.getText());
+        double a22 = Integer.parseInt(A22.getText());
+        double a23 = Integer.parseInt(A23.getText());
+        double a31 = Integer.parseInt(A31.getText());
+        double a32 = Integer.parseInt(A32.getText());
+        double a33 = Integer.parseInt(A33.getText());
+        double result =((a11*a22*a33)+(a12*a23*a31)+(a13*a21*a32))-((a13*a22*a31)+(a11*a23*a32)+(a12*a21*a33));
 //
 //        
         Hasil.setText(String.valueOf(result));

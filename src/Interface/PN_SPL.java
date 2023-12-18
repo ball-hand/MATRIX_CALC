@@ -471,12 +471,12 @@ public class PN_SPL extends javax.swing.JPanel {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-        int x1 = Integer.parseInt(X1.getText());
-        int x2 = Integer.parseInt(X2.getText());
-        int y1 = Integer.parseInt(Y1.getText());
-        int y2 = Integer.parseInt(Y2.getText());
-        int k1 = Integer.parseInt(K1.getText());
-        int k2 = Integer.parseInt(K2.getText());
+        double x1 = Integer.parseInt(X1.getText());
+        double x2 = Integer.parseInt(X2.getText());
+        double y1 = Integer.parseInt(Y1.getText());
+        double y2 = Integer.parseInt(Y2.getText());
+        double k1 = Integer.parseInt(K1.getText());
+        double k2 = Integer.parseInt(K2.getText());
         
         double det = (y1*x2) -(x1*y2);
         
