@@ -1,0 +1,5 @@
+name: "aljabarGeometri"
+appmap_dir: "tmp/appmap"
+packages:
+- path: "img"
+- path: "Interface"

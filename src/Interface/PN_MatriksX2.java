@@ -4,6 +4,7 @@
  */
 package Interface;
 
+import Rumus.Rumus;
 import javax.swing.ButtonGroup;
 
 /**
@@ -345,18 +346,31 @@ public class PN_MatriksX2 extends javax.swing.JPanel {
         double b21 = Integer.parseInt(B21.getText());
         double b22= Integer.parseInt(B22.getText());
         
+        Rumus rumus = new Rumus();
+        double result[][];
         
         
         if(OP_penjumlahan.isSelected()){
-            C11.setText(String.valueOf(b11+a11));
-            C12.setText(String.valueOf(b12+a12));
-            C21.setText(String.valueOf(b21+a21));
-            C22.setText(String.valueOf(b22+a22));
+            
+            result = rumus.M2(a11, a12, a21, a22, b11, b12, b21, b22,OP_penjumlahan.getText());
+            
+            C11.setText(String.valueOf(result[0][0]));
+            C12.setText(String.valueOf(result[0][1]));
+            C21.setText(String.valueOf(result[1][0]));
+            C22.setText(String.valueOf(result[1][1]));
+            
+            System.out.println(OP_penjumlahan.getText());
+            
         }else{
-            C11.setText(String.valueOf(a11-b11));
-            C12.setText(String.valueOf(a12-b12));
-            C21.setText(String.valueOf(a21-b21));
-            C22.setText(String.valueOf(a22-b22));
+            result = rumus.M2(a11, a12, a21, a22, b11, b12, b21, b22,OP_pengurangan.getText());
+            
+            C11.setText(String.valueOf(result[0][0]));
+            C12.setText(String.valueOf(result[0][1]));
+            C21.setText(String.valueOf(result[1][0]));
+            C22.setText(String.valueOf(result[1][1]));
+            
+            System.out.println(OP_pengurangan.getText());
+                
         }
         
         

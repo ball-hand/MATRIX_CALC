@@ -4,6 +4,8 @@
  */
 package Interface;
 
+import Rumus.Rumus;
+
 /**
  *
  * @author zero
@@ -237,9 +239,11 @@ public class PN_DetX3 extends javax.swing.JPanel {
         double a31 = Integer.parseInt(A31.getText());
         double a32 = Integer.parseInt(A32.getText());
         double a33 = Integer.parseInt(A33.getText());
-        double result =((a11*a22*a33)+(a12*a23*a31)+(a13*a21*a32))-((a13*a22*a31)+(a11*a23*a32)+(a12*a21*a33));
-//
-//        
+        Rumus rumus= new Rumus();
+        double result;
+        result = rumus.determinan(a11, a12, a13, a21, a22, a23, a31,a32, a33
+        );
+       
         Hasil.setText(String.valueOf(result));
     }//GEN-LAST:event_jButton1MouseClicked
 

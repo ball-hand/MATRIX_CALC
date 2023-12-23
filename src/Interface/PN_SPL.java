@@ -4,6 +4,8 @@
  */
 package Interface;
 
+import Rumus.Rumus;
+
 /**
  *
  * @author zero
@@ -471,22 +473,24 @@ public class PN_SPL extends javax.swing.JPanel {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-        double x1 = Integer.parseInt(X1.getText());
-        double x2 = Integer.parseInt(X2.getText());
-        double y1 = Integer.parseInt(Y1.getText());
-        double y2 = Integer.parseInt(Y2.getText());
+        double i11 = Integer.parseInt(X1.getText());
+        double i21 = Integer.parseInt(X2.getText());
+        double i12 = Integer.parseInt(Y1.getText());
+        double i22= Integer.parseInt(Y2.getText());
         double k1 = Integer.parseInt(K1.getText());
         double k2 = Integer.parseInt(K2.getText());
         
-        double det = (y1*x2) -(x1*y2);
-        
+        Rumus rumus = new Rumus();
+        double det = rumus.determinan(i11, i12, i21, i22);
+        System.out.println(det);
+        double result[] = rumus.SPL(i11, i21, i12, i22, k1, k2);
           if (det == 0) {
             R1.setText("Sistem persamaan tidak memiliki solusi unik.");
             R2.setText("Sistem persamaan tidak memiliki solusi unik.");
         } else {
             // Menghitung nilai x dan y
-            R1.setText(String.valueOf( (k1* y2 - y1 * k2) / det));
-            R2.setText(String.valueOf( (x1 * k2 - x2 * k1) / det));
+            R1.setText(String.valueOf(result[0]));
+            R2.setText(String.valueOf(result[1]));
 
             
         }

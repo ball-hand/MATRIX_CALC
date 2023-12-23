@@ -4,6 +4,8 @@
  */
 package Interface;
 
+import Rumus.Rumus;
+
 /**
  *
  * @author zero
@@ -224,25 +226,12 @@ public class PN_Balikan extends javax.swing.JPanel {
         double a21 = Integer.parseInt(A21.getText());
         double a22= Integer.parseInt(A22.getText());
         
-        double Adjoin[][]={
-            {a22,(a12-2*a12)},
-            {(a21-2*a21),a11}
-        };
-            
-        double det = (a11*a22)-(a12*a21);
-        B11.setText(String.valueOf(
-                Adjoin[0][0]/det
-        ));
-        B12.setText(String.valueOf(
-                Adjoin[0][1]/det
-        ));
-        B21.setText(String.valueOf(
-                Adjoin[1][0]/det
-        ));
-        B22.setText(String.valueOf(
-                Adjoin[1][1]/det
-        ));
-        
+        Rumus rumus = new Rumus();
+        double result[][] = rumus.balikan(a11, a12, a21, a22);
+        B11.setText(String.valueOf(result[0][0]));
+        B12.setText(String.valueOf(result[0][1]));
+        B21.setText(String.valueOf(result[1][0]));
+        B22.setText(String.valueOf(result[1][1]));
         
     }//GEN-LAST:event_jButton1MouseClicked
 

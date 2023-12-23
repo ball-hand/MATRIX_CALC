@@ -33,14 +33,14 @@ public class PN_Transpose extends javax.swing.JPanel {
         A21 = new javax.swing.JTextField();
         A22 = new javax.swing.JTextField();
         A12 = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        LB_MatA = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         B11 = new javax.swing.JTextField();
         B21 = new javax.swing.JTextField();
         B22 = new javax.swing.JTextField();
         B12 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        LB_Hasil = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -110,9 +110,9 @@ public class PN_Transpose extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        jLabel1.setBackground(new java.awt.Color(51, 51, 51));
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Matrix A");
+        LB_MatA.setBackground(new java.awt.Color(51, 51, 51));
+        LB_MatA.setForeground(new java.awt.Color(255, 255, 255));
+        LB_MatA.setText("Matrix A");
 
         jButton1.setBackground(new java.awt.Color(0, 153, 102));
         jButton1.setForeground(new java.awt.Color(0, 0, 0));
@@ -174,9 +174,9 @@ public class PN_Transpose extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        jLabel2.setBackground(new java.awt.Color(51, 51, 51));
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Hasil");
+        LB_Hasil.setBackground(new java.awt.Color(51, 51, 51));
+        LB_Hasil.setForeground(new java.awt.Color(255, 255, 255));
+        LB_Hasil.setText("Hasil");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -187,10 +187,10 @@ public class PN_Transpose extends javax.swing.JPanel {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(LB_MatA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(198, 198, 198))
                     .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(LB_Hasil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -201,13 +201,13 @@ public class PN_Transpose extends javax.swing.JPanel {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(LB_MatA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(83, 83, 83)
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(LB_Hasil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(133, 133, 133))
@@ -244,9 +244,9 @@ public class PN_Transpose extends javax.swing.JPanel {
     private javax.swing.JTextField B12;
     private javax.swing.JTextField B21;
     private javax.swing.JTextField B22;
+    private javax.swing.JLabel LB_Hasil;
+    private javax.swing.JLabel LB_MatA;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

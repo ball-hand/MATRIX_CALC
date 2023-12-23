@@ -4,6 +4,7 @@
  */
 package Interface;
 
+import Rumus.Rumus;
 import static java.awt.Color.black;
 import static java.awt.Color.white;
 import javax.swing.ButtonGroup;
@@ -452,29 +453,31 @@ public class PN_MatriksX3 extends javax.swing.JPanel {
         double b32= Integer.parseInt(B32.getText());
         double b33= Integer.parseInt(B33.getText());
         
-        
+        Rumus rumus = new Rumus();
         
         if(OP_penjumahan.isSelected()){
-            C11.setText(String.valueOf(b11+a11));
-            C12.setText(String.valueOf(b12+a12));
-            C21.setText(String.valueOf(b21+a21));
-            C22.setText(String.valueOf(b22+a22));
-            C23.setText(String.valueOf(b23+a23));
-            C13.setText(String.valueOf(b13+a13));
-            C31.setText(String.valueOf(b31+a31));
-            C32.setText(String.valueOf(b32+a32));
-            C33.setText(String.valueOf(b33+a33));
-        
+            double [][]result = rumus.M3(a11, a12, a13, a21, a22, a23, a31, a32, a33, b11, b12, b13, b21, b22, b23, b31, b32, b33, OP_penjumahan.getText());
+            C11.setText(String.valueOf(String.valueOf(result[0][0])));
+            C12.setText(String.valueOf(String.valueOf(result[0][1])));
+            C13.setText(String.valueOf(String.valueOf(result[0][2])));
+            C21.setText(String.valueOf(String.valueOf(result[1][0])));
+            C22.setText(String.valueOf(String.valueOf(result[1][1])));
+            C23.setText(String.valueOf(String.valueOf(result[1][2])));
+            C31.setText(String.valueOf(String.valueOf(result[2][0])));
+            C32.setText(String.valueOf(String.valueOf(result[2][1])));
+            C33.setText(String.valueOf(String.valueOf(result[2][2])));
+            
         }else{
-            C11.setText(String.valueOf(a11-b11));
-            C12.setText(String.valueOf(a12-b12));
-            C21.setText(String.valueOf(a21-b21));
-            C22.setText(String.valueOf(a22-b22));
-            C23.setText(String.valueOf(a23-b23));
-            C13.setText(String.valueOf(a13-b13));
-            C31.setText(String.valueOf(a31-b31));
-            C32.setText(String.valueOf(a32-b32));
-            C33.setText(String.valueOf(a33-b33));
+            double [][]result = rumus.M3(a11, a12, a13, a21, a22, a23, a31, a32, a33, b11, b12, b13, b21, b22, b23, b31, b32, b33, OP_pengurangan.getText());
+            C11.setText(String.valueOf(String.valueOf(result[0][0])));
+            C12.setText(String.valueOf(String.valueOf(result[0][1])));
+            C13.setText(String.valueOf(String.valueOf(result[0][2])));
+            C21.setText(String.valueOf(String.valueOf(result[1][0])));
+            C22.setText(String.valueOf(String.valueOf(result[1][1])));
+            C23.setText(String.valueOf(String.valueOf(result[1][2])));
+            C31.setText(String.valueOf(String.valueOf(result[2][0])));
+            C32.setText(String.valueOf(String.valueOf(result[2][1])));
+            C33.setText(String.valueOf(String.valueOf(result[2][2])));
             
         }
 
